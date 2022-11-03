@@ -6,4 +6,10 @@
   </mat-form-field>
   <button class="button" type="submit" mat-raised-button color="primary" (click)="save()">Speichern</button>
 </form>
-
+<button class="loadButton" mat-raised-button color="primary" (click)="fetch()">Lade Daten</button>
+<ul class="mat-list-base">
+  <li class="mat-list-item" *ngFor="let contentObject of loadedContentObjects">
+    <h1>{{contentObject.id}}</h1>
+    <p>{{contentObject.content}}</p>
+  </li>
+</ul>
